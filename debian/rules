@@ -1,0 +1,46 @@
+#!/usr/bin/make -f
+
+clean:
+	dh_testdir
+
+	rm -f build-stamp install-stamp
+	$(MAKE) clean
+
+	dh_clean
+
+build: build-stamp
+build-stamp:
+	dh_testdir
+
+	$(MAKE)
+
+	touch $@
+
+install: install-stamp
+install-stamp:
+	dh_testdir
+
+	install -d $(CURDIR)/debian/paxctl/sbin/
+	install -m0755 paxctl $(CURDIR)/debian/paxctl/sbin/
+
+	touch $@
+
+binary-indep: build install
+
+binary-arch: build install
+	dh_testdir
+
+	dh_installdocs README
+	dh_installman paxctl.1
+	dh_installchangelogs ChangeLog
+	dh_compress
+	dh_strip
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: clean build install binary binary-indep binary-arch

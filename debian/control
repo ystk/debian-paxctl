@@ -1,0 +1,15 @@
+Source: paxctl
+Section: admin
+Priority: extra
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Build-Depends: debhelper (>= 4.0.0)
+Standards-Version: 3.8.0
+
+Package: paxctl
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: user-space utility to control PaX flags - new major upstream version
+ paxctl may be used to control PaX flags on a per-binary basis. PaX is a set
+ of kernel security patches to enhance a system's security. It is part of
+ grsecurity (kernel-patch-2.4-grsecurity), among others. Please note paxctl
+ only works with PaX patches released after 2004.02.04.
