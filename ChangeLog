@@ -1,3 +1,17 @@
+2012.03.23 PaX Team <pageexec@freemail.hu>
+	fixed gentoo bug #408377
+	thanks to <wbrana@gmail.com> for reporting
+
+2012.02.19 PaX Team <pageexec@freemail.hu>
+	fixed EMUTRMAP typo
+	thanks to Francisco Blas Izquierdo Riera (klondike) <klondike@gentoo.org>
+
+2010.05.20 PaX Team <pageexec@freemail.hu>
+	introduced paxctl-elf.c
+
+2009.06.25 PaX Team <pageexec@freemail.hu>
+	changed macro functions into normal ones
+
 2007.04.16 PaX Team <pageexec@freemail.hu>
 	fixed section header offset handling in stripped binaries,
 	thanks to Ned Ludd <solar@gentoo.org>
