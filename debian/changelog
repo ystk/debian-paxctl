@@ -1,3 +1,17 @@
+paxctl (0.7-1) unstable; urgency=low
+
+  * New upstream release (closes: #671042).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Tue, 01 May 2012 17:21:13 +0200
+
+paxctl (0.6-1) unstable; urgency=low
+
+  * New upstream release.
+  * Change to 3.0 (quilt) source format and update packaging bits.
+  * Update package description (closes: #569634).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.hu>  Sat, 03 Mar 2012 17:57:51 +0100
+
 paxctl (0.5-1) unstable; urgency=low
 
   * Update Standards-Version to 3.8.0 . Correct debian/copyright .

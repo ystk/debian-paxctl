@@ -8,7 +8,10 @@ clean:
 
 	dh_clean
 
-build: build-stamp
+build-arch: build-stamp
+build-indep: build-stamp
+
+build: build-arch build-indep
 build-stamp:
 	dh_testdir
 

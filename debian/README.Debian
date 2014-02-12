@@ -3,7 +3,7 @@ This package is not usable as is. It needs applications compiled with a
 special binutils patch[1] applied. If you do not want to recompile your
 binaries, you can fetch debs from the grsecurity site[2] for i386 and Sparc
 (sources are also available from the same location and at the time of
-writing only unstable is supported). An other more complete repository is
+writing only unstable is supported). Another more complete repository is
 available[3].
 But please note that neither are maintained by Debian thus they are not
 official. Please do not file bugs against them, but notify the package

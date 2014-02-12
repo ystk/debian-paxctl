@@ -1,5 +1,4 @@
 CC:=gcc
-CP:=cp
 CFLAGS:=-Os -ggdb -Wall -W -Wcast-qual -Wcast-align -Wbad-function-cast -Wshadow -Wwrite-strings -Wnested-externs -Winline -Wredundant-decls -Waggregate-return -Wformat=2 -Wpointer-arith -Wconversion -Wmissing-declarations -Wmissing-prototypes
 # -Wunreachable-code -Wdisabled-optimization
 DESTDIR:=
@@ -15,13 +14,11 @@ all: $(PROG)
 $(PROG): $(PROG).o
 	$(CC) $(LDFLAGS) -o $@ $<
 
-$(PROG).o: $(PROG).c $(PROG).h
+$(PROG).o: $(PROG).c $(PROG).h $(PROG)-elf.c
 	$(CC) -c $(CFLAGS) -o $@ $<
 
 install: $(PROG)
 #	$(MKDIR) $(DESTDIR)/sbin $(DESTDIR)$(MANDIR)
-#	$(CP) $(PROG) $(DESTDIR)/sbin
-#	$(CP) $(PROG).1 $(DESTDIR)$(MANDIR)
 	$(INSTALL) -D --owner 0 --group 0 --mode a=rx $(PROG) $(DESTDIR)/sbin/$(PROG)
 	$(INSTALL) -D --owner 0 --group 0 --mode a=r $(PROG).1 $(DESTDIR)/$(MANDIR)/$(PROG).1
 
