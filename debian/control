@@ -1,10 +1,10 @@
 Source: paxctl
 Section: admin
 Priority: extra
-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Build-Depends: debhelper (>= 8.0.0)
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Build-Depends: debhelper (>= 9)
 Homepage: http://pax.grsecurity.net/
-Standards-Version: 3.9.3
+Standards-Version: 3.9.5
 
 Package: paxctl
 Architecture: any

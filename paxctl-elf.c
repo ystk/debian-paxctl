@@ -1,6 +1,6 @@
 /*
  * PaX control ELF support
- * Copyright 2004,2005,2006,2007,2009,2010,2011 PaX Team <pageexec@freemail.hu>
+ * Copyright 2004,2005,2006,2007,2009,2010,2011,2014 PaX Team <pageexec@freemail.hu>
  * Licensed under the GNU GPL version 2
  */
 
@@ -214,8 +214,10 @@ static int ElfW(elf, _modify_phdr) (struct pax_state * const state)
         if (newphdr[i].p_align > shift)
           newphdr[i].p_align = shift;
       }
-      newphdr[pt_load].p_memsz += shift;
-      newphdr[pt_load].p_filesz += shift;
+      if (newphdr[pt_load].p_offset < sizeof(ElfW(Elf, _Ehdr)) + sizeof(ElfW(Elf, _Phdr)) * state->ops->phnum.ElfW(_, )) {
+        newphdr[pt_load].p_memsz += shift;
+        newphdr[pt_load].p_filesz += shift;
+      }
 
       /* the moment of truth */
       pax_flags = i;

@@ -1,3 +1,2 @@
 version=3
-
-http://pax.grsecurity.net/paxctl-(.*).tar.gz
+http://pax.grsecurity.net/paxctl-(\d.*)\.(?:tgz|tar\.(?:gz|bz2|xz))

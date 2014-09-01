@@ -1,3 +1,13 @@
+paxctl (0.8-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update Standards-Version to 3.9.5 and debhelper level to 9 .
+
+  [ Bart Martens <bartm@debian.org> ]
+  * Update watch file.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Tue, 03 Jun 2014 20:20:20 +0000
+
 paxctl (0.7-1) unstable; urgency=low
 
   * New upstream release (closes: #671042).

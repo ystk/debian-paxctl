@@ -1,3 +1,7 @@
+2014.05.04 PaX Team <pageexec@freemail.hu>
+	fixed handling of ELF files whose ELF/PT headers aren't covered by a PT_LOAD segment, e.g., memcheck-amd64-linux from valgrind
+	thanks to Mathias Krause <minipli@googlemail.com>
+
 2012.03.23 PaX Team <pageexec@freemail.hu>
 	fixed gentoo bug #408377
 	thanks to <wbrana@gmail.com> for reporting
