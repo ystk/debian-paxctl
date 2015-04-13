@@ -1,10 +1,11 @@
 /*
  * PaX control
- * Copyright 2004,2005,2006,2007,2009,2010,2011,2012 PaX Team <pageexec@freemail.hu>
+ * Copyright 2004,2005,2006,2007,2009,2010,2011,2012,2014 PaX Team <pageexec@freemail.hu>
  * Licensed under the GNU GPL version 2
  */
 
 #define _GNU_SOURCE
+#define _FILE_OFFSET_BITS 64
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -71,7 +72,7 @@ static void banner(void)
 {
   fprintf(stderr,
     "PaX control v" PAXCTL_VERSION "\n"
-    "Copyright 2004,2005,2006,2007,2009,2010,2011,2012 PaX Team <pageexec@freemail.hu>\n\n");
+    "Copyright 2004,2005,2006,2007,2009,2010,2011,2012,2014 PaX Team <pageexec@freemail.hu>\n\n");
 }
 
 static void usage(void)
@@ -121,7 +122,7 @@ static int pax_verify_file(struct pax_state * const state)
     return EXIT_FAILURE;
   }
 
-  if (st.st_size < 0 || INT_MAX < st.st_size) {
+  if (st.st_size < 0 || LONG_MAX < st.st_size) {
     close(fd);
     if (!state->quiet)
       fprintf(stderr, "file %s is too big\n", state->argv[state->files]);

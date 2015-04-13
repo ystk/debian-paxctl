@@ -3,7 +3,7 @@
 
 #include <elf.h>
 
-#define PAXCTL_VERSION "0.8"
+#define PAXCTL_VERSION "0.9"
 
 struct pax_state;
 
