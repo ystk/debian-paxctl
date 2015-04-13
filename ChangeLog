@@ -1,3 +1,7 @@
+2014.08.30 PaX Team <pageexec@freemail.hu>
+	added support for files larger than 2G on 64 bit archs
+	see https://bugs.gentoo.org/show_bug.cgi?id=520198
+
 2014.05.04 PaX Team <pageexec@freemail.hu>
 	fixed handling of ELF files whose ELF/PT headers aren't covered by a PT_LOAD segment, e.g., memcheck-amd64-linux from valgrind
 	thanks to Mathias Krause <minipli@googlemail.com>

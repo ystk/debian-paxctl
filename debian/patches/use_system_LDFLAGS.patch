@@ -1,0 +1,18 @@
+Description: do not empty LDFLAGS
+ Uncomment the line that would empty set it.
+Author: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Last-Update: 2014-09-06
+
+---
+
+--- paxctl-0.9.orig/Makefile
++++ paxctl-0.9/Makefile
+@@ -2,7 +2,7 @@ CC:=gcc
+ CFLAGS:=-Os -ggdb -Wall -W -Wcast-qual -Wcast-align -Wbad-function-cast -Wshadow -Wwrite-strings -Wnested-externs -Winline -Wredundant-decls -Waggregate-return -Wformat=2 -Wpointer-arith -Wconversion -Wmissing-declarations -Wmissing-prototypes
+ # -Wunreachable-code -Wdisabled-optimization
+ DESTDIR:=
+-LDFLAGS:=
++#LDFLAGS:=
+ MANDIR:=/usr/share/man/man1
+ #MKDIR:=mkdir -p
+ INSTALL:=install
